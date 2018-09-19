@@ -1,0 +1,151 @@
+<html>
+<head>
+	<style>
+		/* MEDIA QUERY
+		When the width is smaller than 468px, it doesn't enable Flexbox, bringing responsiveness
+		*/
+		@media(min-width: 468px){
+			.container-1{
+				display: flex; /* enables flexbox */
+				
+				/* ITEMS ALIGNMENT
+
+				Description: align items vertically (based in their content) with the flexbox's container top, middle or bottom line or stretch to fit.
+
+				align-items: stretch; (default)
+				align-items: flex-start;
+				align-items: center;
+				align-items: flex-end;
+
+				*/
+
+				/* ITEMS DIRECTION
+
+				Description: spread flexbox items vertically or horizontally (set the layout direction).
+
+				flex-direction: row; (default)
+				flex-direction: column;
+
+				*/
+
+			}
+			
+			.container-2{
+				display: flex;
+				
+				/* ITEMS JUSTIFYING
+
+				Description: justify (align horizontally) flexbox items based on the start, center or end line
+
+				justify-content: flex-start; (default)
+				justify-content: flex-end;
+				justify-content: center;
+				justify-content: space-between; (create margins only in the middle, not touching the browser's edge)
+				justify-content: space-around; (create margins all around the items, touching the browser's edge)
+
+				*/
+			}
+		}
+
+		.container-1 section, .container-2 section, .container-3 section{
+			border: 1px #ccc solid;
+			padding: 10px;
+		}
+
+		.box-1{
+			flex: 2; /* set to use 2 fractions of the screen */
+			order: 2; /* set a flexbox child to appear at 2nd */
+
+		}
+
+		.box-2{
+			flex: 1;
+			order: 1;
+		}
+
+		.box-3{
+			flex: 1;
+			order: 3;
+		}
+
+		.container-2-box{
+			/* FLEXBOX WAY OF USING WIDTH */
+
+			/* it leaves a blank space in the container-2 when without margins */
+
+			flex-basis: 20%;
+		}
+
+		.container-3{
+			display: flex;
+			flex-wrap: wrap; /* it pushes things below when the screen's width isn't suficient */
+			justify-content: space-between;
+		}
+
+		.container-3-box{
+			/* Without wrapping, this width isn't respected */
+			flex-basis: 10%;
+		}
+
+	</style>
+</head>
+<body>
+
+	<section class="container-1">
+		<section class="box-1">
+			<h3>Box One</h3>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cupiditate odio quas nesciunt itaque, esse sequi hic debitis iure, corrupti fugiat quo necessitatibus, ipsam dolor? Consequatur dicta sed quis officia?</p>
+		</section>
+		<section class="box-2">
+			<h3>Box Two</h3>
+			<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta officia repudiandae culpa, alias necessitatibus assumenda ipsa voluptatum autem consectetur repellat doloremque nulla quis itaque dolorem, eaque, numquam voluptatibus? Voluptatum, veritatis!</p>
+		</section>
+		<section class="box-3">
+			<h3>Box Three</h3>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident cumque ipsa pariatur voluptatem, consequatur earum explicabo repudiandae sunt a distinctio tenetur natus ex rerum, nesciunt nam autem minima voluptatibus expedita?</p>
+		</section>
+	</section>
+
+	<section class="container-2">
+		<section class="container-2-box">
+			<h3>Box Four</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni dolor quas exercitationem praesentium, odio cum perferendis maiores sequi ipsum, obcaecati quos labore. Fugit porro velit mollitia libero ipsa cupiditate.</p>
+		</section>
+		<section class="container-2-box">
+			<h3>Box Five</h3>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati ratione omnis porro, architecto accusamus fugit perspiciatis at autem, repellat quae qui itaque voluptatum nostrum delectus adipisci. Ullam velit minima obcaecati?</p>
+		</section>
+		<section class="container-2-box">
+			<h3>Box Six</h3>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id aut explicabo nam repellat reprehenderit nemo eius eos alias tenetur doloremque. Quia est unde, eveniet ut eos nulla accusamus optio fugiat.</p>
+		</section>
+	</section>
+
+	<section class="container-3">
+		<section class="container-3-box">
+			<h3>Box Seven</h3>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi magnam eaque culpa harum qui? Dicta provident ullam aut rerum dolor quod laborum beatae eius rem facere, quia delectus suscipit? Et!</p>
+		</section>
+		<section class="container-3-box">
+			<h3>Box Eight</h3>
+			<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi beatae, pariatur obcaecati animi quo nihil sint dolorum maxime quae aliquam aut illo unde sit magnam dolorem, molestias non praesentium reiciendis.</p>
+		</section>
+		<section class="container-3-box">
+			<h3>Box Nine</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis quod non saepe soluta itaque voluptates alias distinctio quibusdam. Assumenda, culpa? Possimus quasi pariatur ipsam soluta dolore officiis dolorum labore ullam.</p>
+		</section>
+		<section class="container-3-box">
+			<h3>Box Ten</h3>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis sunt ab deserunt rerum assumenda ex hic dolorem dolore, corrupti optio tenetur, voluptas magni ratione, minus dolorum cum veritatis dolores numquam.</p>
+		</section>
+		<section class="container-3-box">
+			<h3>Box Eleven</h3>
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero dicta illo reprehenderit unde, velit quibusdam eum adipisci molestias id earum officia aliquid neque molestiae nam doloribus soluta architecto. Incidunt, itaque.</p>
+		</section>
+		<section class="container-3-box">
+			<h3>Box Twelve</h3>
+			<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, iusto. Dolorum error dolore ipsam eveniet nobis, beatae, et dolores laborum facere, asperiores quibusdam sequi blanditiis cum deserunt fuga necessitatibus quas.</p>
+		</section>
+	</section>
+</body>
+</html>
